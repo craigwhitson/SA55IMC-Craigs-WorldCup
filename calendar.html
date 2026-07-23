@@ -1,0 +1,22 @@
+<!doctype html>
+<html lang="en"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#006b3f"><title>SA55 IMC Calendar</title>
+<style>
+body{font-family:system-ui,-apple-system,sans-serif;background:#f4f7f5;color:#17231e;margin:0;padding:22px}
+main{max-width:640px;margin:auto}.card{background:#fff;border-radius:18px;padding:22px;box-shadow:0 8px 28px #073b2a18}
+h1{color:#006b3f}.btn{display:block;text-align:center;text-decoration:none;padding:15px;margin:13px 0;border-radius:12px;font-weight:850}
+.primary{background:#006b3f;color:#fff}.gold{background:#ffb81c;color:#111}.muted{color:#607068;line-height:1.5}
+</style></head><body><main><div class="card">
+<h1>South Africa IMC World Cup Calendar</h1>
+<p>Choose the most suitable option for your device.</p>
+<a class="btn primary" id="subscribe" href="#">Subscribe on iPhone / iPad</a>
+<a class="btn gold" href="SA55_IMC_Complete_Calendar_v2.ics">Download calendar file</a>
+<a class="btn gold" href="SA55_IMC_5_August_Training.ics">Download training-only file</a>
+<p class="muted"><b>Apple Calendar:</b> tap the subscription button and confirm. A subscribed calendar can receive updates when the hosted ICS file is replaced at the same address.</p>
+<p class="muted"><b>Google Calendar:</b> download the ICS file, then import it from Google Calendar on a computer.</p>
+<p><a href="index.html">Return to dashboard</a></p>
+</div></main><script>
+const u=location.origin+location.pathname.replace(/calendar\.html$/,"")+"SA55_IMC_Complete_Calendar_v2.ics";
+document.getElementById("subscribe").href="webcal://"+u.replace(/^https?:\/\//,"");
+</script></body></html>
