@@ -1,22 +1,23 @@
 <!doctype html>
 <html lang="en"><head>
 <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<meta name="theme-color" content="#006b3f"><title>SA55 IMC Calendar</title>
+<meta name="theme-color" content="#063b2a"><link rel="apple-touch-icon" href="apple-touch-icon.png">
+<title>World Cup Calendar</title>
 <style>
-body{font-family:system-ui,-apple-system,sans-serif;background:#f4f7f5;color:#17231e;margin:0;padding:22px}
-main{max-width:640px;margin:auto}.card{background:#fff;border-radius:18px;padding:22px;box-shadow:0 8px 28px #073b2a18}
-h1{color:#006b3f}.btn{display:block;text-align:center;text-decoration:none;padding:15px;margin:13px 0;border-radius:12px;font-weight:850}
-.primary{background:#006b3f;color:#fff}.gold{background:#ffb81c;color:#111}.muted{color:#607068;line-height:1.5}
+body{margin:0;background:#f2f6f3;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Arial;color:#16231c;padding:22px}
+main{max-width:680px;margin:auto}.card{background:#fff;border-radius:22px;padding:24px;box-shadow:0 16px 40px rgba(5,47,34,.14)}
+h1{color:#063b2a}.btn{display:block;text-align:center;text-decoration:none;border-radius:14px;padding:15px;margin:13px 0;font-weight:850}
+.green{background:#006b3f;color:#fff}.gold{background:#ffb81c;color:#111}.muted{color:#6a776f;line-height:1.55}
 </style></head><body><main><div class="card">
 <h1>South Africa IMC World Cup Calendar</h1>
-<p>Choose the most suitable option for your device.</p>
-<a class="btn primary" id="subscribe" href="#">Subscribe on iPhone / iPad</a>
-<a class="btn gold" href="SA55_IMC_Complete_Calendar_v2.ics">Download calendar file</a>
-<a class="btn gold" href="SA55_IMC_5_August_Training.ics">Download training-only file</a>
-<p class="muted"><b>Apple Calendar:</b> tap the subscription button and confirm. A subscribed calendar can receive updates when the hosted ICS file is replaced at the same address.</p>
-<p class="muted"><b>Google Calendar:</b> download the ICS file, then import it from Google Calendar on a computer.</p>
-<p><a href="index.html">Return to dashboard</a></p>
-</div></main><script>
-const u=location.origin+location.pathname.replace(/calendar\.html$/,"")+"SA55_IMC_Complete_Calendar_v2.ics";
-document.getElementById("subscribe").href="webcal://"+u.replace(/^https?:\/\//,"");
+<p>Add flights, training and fixtures to your calendar.</p>
+<a id="sub" class="btn green" href="#">Subscribe on Apple Calendar</a>
+<a class="btn gold" href="Craig_Whitson_World_Cup_2026.ics">Download complete ICS calendar</a>
+<p class="muted"><b>iPhone or iPad:</b> tap the Apple subscription button and approve the calendar.</p>
+<p class="muted"><b>Outlook or Google Calendar:</b> download the ICS file and import it.</p>
+<p><a href="index.html">Return to the World Cup app</a></p>
+</div></main>
+<script>
+const u=location.origin+location.pathname.replace(/calendar\.html$/,"")+"Craig_Whitson_World_Cup_2026.ics";
+document.getElementById("sub").href="webcal://"+u.replace(/^https?:\/\//,"");
 </script></body></html>

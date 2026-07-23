@@ -1,14 +1,29 @@
-UPLOAD ALL SEVEN FILES TO THE ROOT OF:
+CRAIG WHITSON WORLD CUP — FINAL PROFESSIONAL VERSION
+
+Repository:
 https://github.com/craigwhitson/SA55IMC-Craigs-WorldCup
 
-1. On your laptop, open the repository.
-2. Select Add file > Upload files.
-3. Upload all files from this package.
-4. Confirm replacement of the existing index.html and calendar.html files.
-5. Commit directly to the main branch.
-6. Wait 2-5 minutes.
-7. Open the PUBLISHED SITE in Safari or Chrome:
+UPLOAD
+1. Extract this ZIP on your laptop.
+2. Open the GitHub repository above.
+3. Select Add file > Upload files.
+4. Upload every file from the extracted folder into the repository root.
+5. Confirm replacement of existing files.
+6. Commit directly to the main branch.
+7. Wait about 2–5 minutes.
+8. Open:
    https://craigwhitson.github.io/SA55IMC-Craigs-WorldCup/
 
-IMPORTANT:
-Do not open index.html inside the GitHub mobile app. That is a file preview and may not run the site styling or scripts correctly.
+IMPORTANT CACHE STEP
+Because an earlier service worker may be stored on your phone:
+- Open the website in Safari.
+- Refresh it once.
+- If the old version still appears, go to iPhone Settings > Safari > Advanced > Website Data,
+  search for github.io, remove that site data, and reopen the address.
+- Remove the old Home Screen icon and add it again after the new version is visible.
+
+SHARING
+Use the Share on WhatsApp button on the home page, or send the GitHub Pages address.
+
+PRIVACY
+Results and journal entries are stored locally on each device. They are not published to GitHub.

@@ -1,9 +1,22 @@
 {
-  "name": "Craig's South Africa IMC World Cup 2026",
-  "short_name": "SA IMC 2026",
+  "name": "Craig Whitson \u00b7 World Cup 2026",
+  "short_name": "Craig WC 2026",
   "start_url": "./index.html",
+  "scope": "./",
   "display": "standalone",
-  "background_color": "#f4f7f5",
-  "theme_color": "#006b3f",
-  "description": "South Africa IMC World Masters Hockey tournament companion."
+  "background_color": "#f2f6f3",
+  "theme_color": "#063b2a",
+  "description": "Craig Whitson's South Africa IMC World Masters Hockey journey.",
+  "icons": [
+    {
+      "src": "icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
 }
