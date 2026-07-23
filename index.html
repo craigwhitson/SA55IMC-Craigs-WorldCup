@@ -1,0 +1,243 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#006b3f">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="SA IMC 2026">
+<link rel="manifest" href="manifest.webmanifest">
+<meta name="description" content="Craig Whitson's SA 55 IMC World Cup tournament companion for Brasschaat 2026.">
+<title>SA 55 IMC | Craig's World Cup 2026</title>
+<style>
+:root{
+ --green:#006b3f;--deep:#073b2a;--gold:#ffb81c;--red:#d22630;
+ --blue:#0057a8;--ink:#17231e;--muted:#607068;--paper:#f4f7f5;
+ --card:#fff;--line:#dfe7e2;--shadow:0 8px 28px rgba(7,59,42,.10);
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;font-family:system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;background:var(--paper);color:var(--ink)}
+.hero{background:linear-gradient(135deg,var(--deep),var(--green));color:#fff;padding:calc(22px + env(safe-area-inset-top)) 18px 24px}
+.hero-inner{max-width:1120px;margin:auto;display:grid;grid-template-columns:1fr auto;gap:18px;align-items:center}
+.eyebrow{font-weight:800;letter-spacing:.13em;text-transform:uppercase;color:var(--gold);font-size:.76rem}
+h1{font-size:clamp(1.7rem,5vw,3rem);line-height:1.05;margin:.4rem 0}
+.hero p{margin:.35rem 0;opacity:.92}
+.flag{font-size:3rem;filter:drop-shadow(0 4px 8px #0004)}
+nav{position:sticky;top:0;z-index:20;background:rgba(244,247,245,.95);backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
+.nav-inner{max-width:1120px;margin:auto;padding:10px 14px;display:flex;gap:8px;overflow-x:auto}
+nav button{border:0;border-radius:999px;padding:10px 14px;background:#fff;color:var(--ink);font-weight:750;white-space:nowrap;box-shadow:0 2px 8px #0000000b}
+nav button.active{background:var(--gold)}
+main{max-width:1120px;margin:auto;padding:14px}
+section{display:none}
+section.active{display:block}
+.grid{display:grid;gap:14px}
+.grid-4{grid-template-columns:repeat(4,1fr)}
+.grid-2{grid-template-columns:repeat(2,1fr)}
+.card{background:var(--card);border:1px solid #edf1ee;border-radius:18px;padding:17px;box-shadow:var(--shadow)}
+.card h2,.card h3{margin-top:0}
+.kpi{text-align:center;background:linear-gradient(180deg,#fff,#eff8f3)}
+.kpi strong{display:block;font-size:1.45rem;color:var(--green)}
+.small{font-size:.85rem}.muted{color:var(--muted)}
+.next{border-left:7px solid var(--gold)}
+.match{border-left:7px solid var(--green)}
+.badge{display:inline-block;background:#edf3ef;border-radius:999px;padding:6px 10px;font-size:.76rem;margin:3px 4px 3px 0}
+.btn{display:inline-block;border:0;border-radius:11px;padding:11px 14px;background:var(--green);color:#fff;text-decoration:none;font-weight:800;cursor:pointer}
+.btn.gold{background:var(--gold);color:#111}.btn.light{background:#eaf0ec;color:var(--ink)}
+table{width:100%;border-collapse:collapse;font-size:.84rem}
+th,td{padding:9px 6px;border-bottom:1px solid var(--line);text-align:center}
+th:nth-child(2),td:nth-child(2){text-align:left}
+input.score{width:52px;padding:8px;border:1px solid #cdd9d2;border-radius:9px;text-align:center}
+.timeline{position:relative;padding-left:20px}
+.timeline:before{content:"";position:absolute;left:6px;top:6px;bottom:6px;width:3px;background:#dbe7e0}
+.stop{position:relative;padding:0 0 18px 14px}
+.stop:before{content:"";position:absolute;left:-19px;top:5px;width:13px;height:13px;border-radius:50%;background:var(--gold);border:3px solid #fff;box-shadow:0 0 0 2px var(--green)}
+.notice{background:#fff7da;border-color:#f0d56e}
+footer{max-width:1120px;margin:auto;padding:24px 16px 40px;text-align:center;color:var(--muted);font-size:.78rem}
+@media(max-width:760px){.grid-4,.grid-2{grid-template-columns:1fr}.hero-inner{grid-template-columns:1fr}.flag{display:none}}
+</style>
+</head>
+<body>
+<header class="hero">
+ <div class="hero-inner">
+  <div>
+   <div class="eyebrow">World Masters Hockey · Brasschaat 2026</div>
+   <h1>Craig’s South Africa IMC World Cup</h1>
+   <p>South Africa IMC · fixtures, results, playoff pathway, venues and calendar.</p>
+  </div>
+  <div class="flag" aria-hidden="true">🇿🇦🏑</div>
+ </div>
+</header>
+
+<nav><div class="nav-inner">
+ <button class="active" data-tab="home">Home</button>
+ <button data-tab="fixtures">My fixtures</button>
+ <button data-tab="standings">Standings</button>
+ <button data-tab="results">Enter results</button>
+ <button data-tab="playoffs">Playoffs</button>
+ <button data-tab="venues">Venues</button>
+ <button data-tab="travel">Travel</button>
+ <button data-tab="calendar">Calendar</button>
+</div></nav>
+
+<main>
+<section id="home" class="active">
+ <div class="grid grid-4">
+  <div class="card kpi"><span class="small muted">Pool matches</span><strong>4</strong></div>
+  <div class="card kpi"><span class="small muted">Training sessions</span><strong>2</strong></div>
+  <div class="card kpi"><span class="small muted">First match</span><strong>8 Aug</strong></div>
+  <div class="card kpi"><span class="small muted">Medal day</span><strong>16 Aug</strong></div>
+ </div>
+ <div class="card next">
+  <h2>Next scheduled event</h2>
+  <div id="countdown" style="font-size:1.45rem;font-weight:900;color:var(--red)">Calculating…</div>
+  <p id="nextEvent" class="muted"></p>
+ </div>
+ <div class="grid grid-2">
+  <div class="card">
+   <h2>Training day · 5 August</h2>
+   <p><b>11:00–12:00</b><br>KHC Dragons, Brasschaat</p>
+   <p><b>15:00–16:00</b><br>Hockey Club Olympia, Antwerp</p>
+  </div>
+  <div class="card notice">
+   <h2>Public site privacy</h2>
+   <p>This public version contains no expense tracker, personal budget or private financial information.</p>
+  </div>
+ </div>
+</section>
+
+<section id="fixtures">
+ <div class="card"><h2>South Africa IMC pool fixtures</h2><p class="muted">All times shown in Belgium local time.</p></div>
+ <div id="myMatches"></div>
+</section>
+
+<section id="standings">
+ <div class="card">
+  <h2>Pool standings calculator</h2>
+  <p class="small muted">Calculated from results entered on this browser using 3 points for a win and 1 for a draw. Official tournament standings and tie-break rules remain authoritative.</p>
+  <div style="overflow:auto">
+   <table><thead><tr><th>#</th><th>Team</th><th>P</th><th>W</th><th>D</th><th>L</th><th>GF</th><th>GA</th><th>GD</th><th>Pts</th></tr></thead><tbody id="standingsBody"></tbody></table>
+  </div>
+ </div>
+ <div class="card" id="saStatus"></div>
+</section>
+
+<section id="results">
+ <div class="card"><h2>Enter pool results</h2><p class="small muted">Results save only in the browser on the device being used; they are not published to GitHub.</p></div>
+ <div id="resultsList"></div>
+ <div class="card"><button class="btn" onclick="saveScores()">Save results</button> <button class="btn light" onclick="clearScores()">Clear</button></div>
+</section>
+
+<section id="playoffs">
+ <div class="grid grid-2">
+  <div class="card"><h2>Pool outcome</h2><span class="badge">1st–2nd: direct semifinal route</span><span class="badge">3rd–6th: elimination route</span><span class="badge">7th–9th: classification route</span></div>
+  <div class="card"><h2>Medal day · 16 August</h2><p><b>Bronze match:</b> 14:30</p><p><b>Final:</b> 15:00</p><p class="small muted">Confirm conditional fixtures against the official tournament schedule once pool positions are final.</p></div>
+ </div>
+</section>
+
+<section id="venues">
+ <div class="grid grid-2">
+  <div class="card"><h2>KHC Dragons</h2><p>Sportendreef 1, 2930 Brasschaat, Belgium</p><a class="btn" target="_blank" rel="noopener" href="https://maps.google.com/?q=Sportendreef+1,+2930+Brasschaat,+Belgium">Open map</a></div>
+  <div class="card"><h2>Hockey Club Olympia</h2><p>Vogelzanglaan 6, 2020 Antwerp, Belgium</p><a class="btn" target="_blank" rel="noopener" href="https://maps.google.com/?q=Vogelzanglaan+6,+2020+Antwerpen,+Belgium">Open map</a></div>
+ </div>
+</section>
+
+<section id="travel">
+ <div class="card"><h2>Road to Brasschaat</h2>
+  <div class="timeline">
+   <div class="stop"><b>2–4 August · Amsterdam</b><br><span class="muted">Arrival period before travelling to Brasschaat.</span></div>
+   <div class="stop"><b>4–16 August · Brasschaat / Antwerp</b><br><span class="muted">Tournament base.</span></div>
+   <div class="stop"><b>After tournament · The Hague</b><br><span class="muted">Family visit after 16 August.</span></div>
+   <div class="stop"><b>Optional side trip</b><br><span class="muted">Cologne offers the best time/cost balance; Luxembourg is quieter; Strasbourg is the most scenic.</span></div>
+   <div class="stop"><b>21 August · Return towards Schiphol</b><br><span class="muted">Keep a one-night buffer before the homeward flight.</span></div>
+  </div>
+ </div>
+</section>
+
+<section id="calendar">
+ <div class="card">
+  <h2>Add the tournament calendar</h2>
+  <p>Use the calendar installation page for Apple Calendar, or download the standard ICS file for Google Calendar and Outlook.</p>
+  <a class="btn gold" href="calendar.html">Open calendar installer</a>
+ </div>
+</section>
+</main>
+
+<footer>Personal tournament companion. Fixture information based on the World Masters Hockey schedule available when this site was prepared. Verify late changes with official tournament communications.</footer>
+
+<script>
+const DATA={
+ team:"South Africa IMC",
+ pool_games:[
+  {date:"2026-08-08",time:"12:40",opponent:"England B",venue:"KHC Dragons · Pitch 2",map:"https://maps.google.com/?q=Sportendreef+1,+2930+Brasschaat,+Belgium"},
+  {date:"2026-08-09",time:"18:10",opponent:"Alliance B",venue:"KHC Dragons · Pitch 4",map:"https://maps.google.com/?q=Sportendreef+1,+2930+Brasschaat,+Belgium"},
+  {date:"2026-08-10",time:"16:20",opponent:"Scottish Thistles",venue:"Hockey Club Olympia · Pitch 2",map:"https://maps.google.com/?q=Vogelzanglaan+6,+2020+Antwerpen,+Belgium"},
+  {date:"2026-08-12",time:"09:15",opponent:"Belgium B",venue:"Hockey Club Olympia · Pitch 5",map:"https://maps.google.com/?q=Vogelzanglaan+6,+2020+Antwerpen,+Belgium"}
+ ],
+ all_pool_games:[
+ ["G1","2026-08-07","14:00","Ireland B","Southern Cross","KHC Dragons P1"],
+ ["G2","2026-08-07","15:50","England B","Scottish Thistles","KHC Dragons P1"],
+ ["G3","2026-08-08","12:40","South Africa IMC","England B","KHC Dragons P2"],
+ ["G4","2026-08-08","14:30","Southern Cross","Alliance A","KHC Dragons P2"],
+ ["G5","2026-08-08","16:20","Wales B","Ireland B","KHC Dragons P2"],
+ ["G6","2026-08-08","18:10","Belgium B","Alliance B","KHC Dragons P2"],
+ ["G7","2026-08-09","16:20","Alliance A","Belgium B","KHC Dragons P4"],
+ ["G8","2026-08-09","18:10","Alliance B","South Africa IMC","KHC Dragons P4"],
+ ["G9","2026-08-09","20:00","Scottish Thistles","Wales B","KHC Dragons P4"],
+ ["G10","2026-08-10","10:50","Alliance A","Ireland B","Olympia P2"],
+ ["G11","2026-08-10","12:40","Belgium B","Southern Cross","Olympia P2"],
+ ["G12","2026-08-10","14:30","England B","Alliance B","Olympia P2"],
+ ["G13","2026-08-10","16:20","Scottish Thistles","South Africa IMC","Olympia P2"],
+ ["G14","2026-08-11","16:20","Wales B","England B","Olympia P2"],
+ ["G15","2026-08-12","09:15","South Africa IMC","Belgium B","Olympia P5"],
+ ["G16","2026-08-12","11:05","Alliance B","Alliance A","Olympia P5"],
+ ["G17","2026-08-12","12:55","Southern Cross","Wales B","Olympia P5"],
+ ["G18","2026-08-12","14:45","Ireland B","Scottish Thistles","Olympia P5"]
+ ],
+ teams:["England B","Southern Cross","Alliance A","South Africa IMC","Scottish Thistles","Ireland B","Belgium B","Alliance B","Wales B"]
+};
+const SA=DATA.team;
+const scores=JSON.parse(localStorage.getItem("sa55_public_scores")||"{}");
+document.querySelectorAll("nav button").forEach(b=>b.addEventListener("click",()=>{
+ document.querySelectorAll("nav button").forEach(x=>x.classList.remove("active"));
+ document.querySelectorAll("main section").forEach(x=>x.classList.remove("active"));
+ b.classList.add("active");document.getElementById(b.dataset.tab).classList.add("active");
+}));
+const fmt=d=>new Date(d+"T12:00:00").toLocaleDateString(undefined,{weekday:"long",day:"numeric",month:"long"});
+function renderMatches(){
+ document.getElementById("myMatches").innerHTML=DATA.pool_games.map(g=>`<div class="card match"><h3>${fmt(g.date)} · ${g.time}</h3><p><b>South Africa IMC vs ${g.opponent}</b><br>${g.venue}</p><a class="btn" target="_blank" rel="noopener" href="${g.map}">Open map</a></div>`).join("");
+}
+function renderResults(){
+ document.getElementById("resultsList").innerHTML=DATA.all_pool_games.map(g=>{const s=scores[g[0]]||["",""];return `<div class="card small"><b>${fmt(g[1])} · ${g[2]}</b><br>${g[3]} <input aria-label="${g[3]} score" class="score" type="number" min="0" id="${g[0]}h" value="${s[0]}"> – <input aria-label="${g[4]} score" class="score" type="number" min="0" id="${g[0]}a" value="${s[1]}"> ${g[4]}<br><span class="muted">${g[5]}</span></div>`}).join("");
+}
+function saveScores(){
+ DATA.all_pool_games.forEach(g=>scores[g[0]]=[document.getElementById(g[0]+"h").value,document.getElementById(g[0]+"a").value]);
+ localStorage.setItem("sa55_public_scores",JSON.stringify(scores));calculate();alert("Results saved on this device.");
+}
+function clearScores(){if(confirm("Clear all locally saved results?")){localStorage.removeItem("sa55_public_scores");location.reload()}}
+function calculate(){
+ const t={};DATA.teams.forEach(x=>t[x]={team:x,p:0,w:0,d:0,l:0,gf:0,ga:0,pts:0});
+ DATA.all_pool_games.forEach(g=>{const s=scores[g[0]];if(!s||s[0]===""||s[1]==="")return;const h=+s[0],a=+s[1],H=t[g[3]],A=t[g[4]];H.p++;A.p++;H.gf+=h;H.ga+=a;A.gf+=a;A.ga+=h;if(h>a){H.w++;A.l++;H.pts+=3}else if(a>h){A.w++;H.l++;A.pts+=3}else{H.d++;A.d++;H.pts++;A.pts++}});
+ const arr=Object.values(t).sort((a,b)=>b.pts-a.pts||((b.gf-b.ga)-(a.gf-a.ga))||b.gf-a.gf||a.team.localeCompare(b.team));
+ document.getElementById("standingsBody").innerHTML=arr.map((x,i)=>`<tr ${x.team===SA?'style="font-weight:850;background:#edf8f2"':''}><td>${i+1}</td><td>${x.team}</td><td>${x.p}</td><td>${x.w}</td><td>${x.d}</td><td>${x.l}</td><td>${x.gf}</td><td>${x.ga}</td><td>${x.gf-x.ga}</td><td>${x.pts}</td></tr>`).join("");
+ const rank=arr.findIndex(x=>x.team===SA)+1,played=t[SA].p,zone=rank<=2?"Direct semifinal zone":rank<=6?"Elimination playoff zone":"Classification zone";
+ document.getElementById("saStatus").innerHTML=`<h2>South Africa projection</h2><p><b>Position ${rank} of 9</b> after ${played} entered matches.</p><span class="badge">${zone}</span>`;
+}
+const events=[
+ ["Training at KHC Dragons","2026-08-05T11:00:00+02:00"],
+ ["Training at Hockey Club Olympia","2026-08-05T15:00:00+02:00"],
+ ...DATA.pool_games.map(g=>["Match vs "+g.opponent,g.date+"T"+g.time+":00+02:00"])
+];
+function updateCountdown(){
+ const now=new Date(),next=events.map(e=>[e[0],new Date(e[1])]).filter(e=>e[1]>now).sort((a,b)=>a[1]-b[1])[0];
+ if(!next){document.getElementById("countdown").textContent="Scheduled pool events completed";document.getElementById("nextEvent").textContent="Check the official schedule for playoff fixtures.";return}
+ const ms=next[1]-now,d=Math.floor(ms/86400000),h=Math.floor(ms%86400000/3600000),m=Math.floor(ms%3600000/60000);
+ document.getElementById("countdown").textContent=`${d} days · ${h} hours · ${m} minutes`;
+ document.getElementById("nextEvent").textContent=`${next[0]} — ${next[1].toLocaleString()}`;
+}
+renderMatches();renderResults();calculate();updateCountdown();setInterval(updateCountdown,60000);
+if("serviceWorker" in navigator){window.addEventListener("load",()=>navigator.serviceWorker.register("service-worker.js").catch(()=>{}));}
+</script>
+</body>
+</html>
