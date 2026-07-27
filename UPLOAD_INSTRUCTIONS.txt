@@ -27,3 +27,12 @@ Use the Share on WhatsApp button on the home page, or send the GitHub Pages addr
 
 PRIVACY
 Results and journal entries are stored locally on each device. They are not published to GitHub.
+
+
+NEW IN VERSION 2
+- Photos tab with private, on-device photo gallery
+- Messages tab with private, on-device supporter message board
+- Direct button to the official tournament site: https://masters.altiusrt.com/
+
+IMPORTANT
+The photo gallery and message board are private to each device. GitHub Pages cannot store shared public uploads or messages without an external database or third-party service.

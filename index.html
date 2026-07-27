@@ -66,6 +66,16 @@ table{width:100%;border-collapse:collapse;font-size:.84rem}th,td{padding:10px 7p
 .score{width:58px;padding:10px;border:1px solid #cbd8d0;border-radius:10px;text-align:center}
 .note-area{width:100%;min-height:160px;border:1px solid #cbd8d0;border-radius:14px;padding:14px;resize:vertical}
 .journal-entry{border-left:4px solid var(--gold);padding-left:13px;margin:15px 0}
+
+.photo-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+.photo-item{background:#fff;border:1px solid var(--line);border-radius:16px;overflow:hidden}
+.photo-item img{display:block;width:100%;aspect-ratio:4/3;object-fit:cover}
+.photo-meta{padding:10px}
+.message{border-left:4px solid var(--green);padding-left:13px;margin:16px 0}
+.message time{font-size:.78rem;color:var(--muted)}
+.file-wrap{border:2px dashed #bfd1c5;border-radius:16px;padding:18px;text-align:center;background:#f8fbf9}
+@media(max-width:700px){.photo-grid{grid-template-columns:repeat(2,1fr)}}
+
 .install-banner{display:none;position:fixed;left:12px;right:12px;bottom:calc(12px + env(safe-area-inset-bottom));z-index:200;background:#fff;border-radius:18px;padding:14px;box-shadow:0 18px 50px rgba(0,0,0,.25);align-items:center;justify-content:space-between;gap:12px}
 .install-banner.show{display:flex}
 footer{background:var(--deep);color:#dce8e1;padding:34px 18px;text-align:center}.footer-inner{max-width:900px;margin:auto}
@@ -85,6 +95,7 @@ footer{background:var(--deep);color:#dce8e1;padding:34px 18px;text-align:center}
   <div class="hero-actions">
    <button class="btn btn-gold" onclick="shareSite()">Share on WhatsApp</button>
    <button class="btn btn-white" data-tab-jump="fixtures">View fixtures</button>
+   <a class="btn btn-white" href="https://masters.altiusrt.com/" target="_blank" rel="noopener">Official tournament</a>
    <button class="btn btn-white" id="installHero" onclick="installApp()">Install app</button>
   </div>
  </div>
@@ -96,6 +107,8 @@ footer{background:var(--deep);color:#dce8e1;padding:34px 18px;text-align:center}
  <button class="nav-btn" data-tab="results">Results</button>
  <button class="nav-btn" data-tab="journey">Journey</button>
  <button class="nav-btn" data-tab="venues">Venues</button>
+ <button class="nav-btn" data-tab="photos">Photos</button>
+ <button class="nav-btn" data-tab="messages">Messages</button>
  <button class="nav-btn" data-tab="journal">Journal</button>
  <button class="nav-btn" data-tab="calendar">Calendar</button>
 </div></nav>
@@ -120,7 +133,7 @@ footer{background:var(--deep);color:#dce8e1;padding:34px 18px;text-align:center}
   </div>
   <div class="card">
    <h2>Quick access</h2>
-   <p><span class="pill">Fixtures</span><span class="pill">Live results</span><span class="pill">Venue maps</span><span class="pill">Travel plan</span><span class="pill">Personal journal</span></p>
+   <p><span class="pill">Fixtures</span><span class="pill">Live results</span><span class="pill">Venue maps</span><span class="pill">Photo gallery</span><span class="pill">Message board</span><span class="pill">Personal journal</span></p>
    <button class="btn btn-green" onclick="shareSite()">Share the journey</button>
   </div>
  </div>
@@ -158,6 +171,34 @@ footer{background:var(--deep);color:#dce8e1;padding:34px 18px;text-align:center}
   <div class="card"><h2>KHC Dragons</h2><p>Sportendreef 1, 2930 Brasschaat, Belgium</p><a class="btn btn-green" target="_blank" rel="noopener" href="https://maps.google.com/?q=Sportendreef+1,+2930+Brasschaat,+Belgium">Open directions</a></div>
   <div class="card"><h2>Hockey Club Olympia</h2><p>Vogelzanglaan 6, 2020 Antwerp, Belgium</p><a class="btn btn-green" target="_blank" rel="noopener" href="https://maps.google.com/?q=Vogelzanglaan+6,+2020+Antwerpen,+Belgium">Open directions</a></div>
  </div>
+</section>
+
+
+<section id="photos" class="section">
+ <div class="section-head"><h2>World Cup photo gallery</h2><p>Add photos from the journey. Photos are stored privately in this browser and are not uploaded to GitHub.</p></div>
+ <div class="card">
+  <div class="file-wrap">
+   <label for="photoInput"><b>Select photos</b></label>
+   <p class="small muted">Choose JPEG, PNG or other image files supported by your browser.</p>
+   <input id="photoInput" type="file" accept="image/*" multiple>
+  </div>
+  <label for="photoCaption" style="display:block;margin-top:14px"><b>Caption</b></label>
+  <input id="photoCaption" type="text" placeholder="Training day, match day, team dinner…" style="width:100%;margin-top:7px;padding:12px;border:1px solid #cbd8d0;border-radius:12px">
+  <p><button class="btn btn-green" type="button" id="addPhotosBtn">Add to gallery</button></p>
+ </div>
+ <div class="card"><h2>My gallery</h2><div id="photoGrid" class="photo-grid"><p class="muted">No photos added yet.</p></div></div>
+</section>
+
+<section id="messages" class="section">
+ <div class="section-head"><h2>Supporter message board</h2><p>Messages entered here stay on this device. A shared public board requires an online database or third-party commenting service.</p></div>
+ <div class="card">
+  <label for="messageName"><b>Name</b></label>
+  <input id="messageName" type="text" placeholder="Your name" style="width:100%;margin:7px 0 13px;padding:12px;border:1px solid #cbd8d0;border-radius:12px">
+  <label for="messageText"><b>Message</b></label>
+  <textarea id="messageText" class="note-area" placeholder="Leave a message of support…"></textarea>
+  <p><button class="btn btn-green" type="button" id="addMessageBtn">Post message</button></p>
+ </div>
+ <div class="card"><h2>Messages</h2><div id="messageList" class="muted">No messages yet.</div></div>
 </section>
 
 <section id="journal" class="section">
@@ -274,6 +315,62 @@ function deleteJournal(i){const j=getJournal();j.splice(i,1);localStorage.setIte
 
 $("#journalDate").valueAsDate=new Date();
 renderResults();renderJournal();updateCountdown();setInterval(updateCountdown,60000);
+
+// Photo gallery stored privately in IndexedDB
+const PHOTO_DB="cw_worldcup_photos";
+function openPhotoDB(){
+ return new Promise((resolve,reject)=>{
+  const req=indexedDB.open(PHOTO_DB,1);
+  req.onupgradeneeded=()=>{const db=req.result;if(!db.objectStoreNames.contains("photos"))db.createObjectStore("photos",{keyPath:"id",autoIncrement:true});};
+  req.onsuccess=()=>resolve(req.result);req.onerror=()=>reject(req.error);
+ });
+}
+async function addPhotos(){
+ const files=[...$("#photoInput").files];
+ if(!files.length){alert("Please select at least one photo.");return;}
+ const caption=$("#photoCaption").value.trim();
+ const db=await openPhotoDB();
+ const tx=db.transaction("photos","readwrite");
+ const store=tx.objectStore("photos");
+ files.forEach(file=>store.add({file,caption,date:Date.now()}));
+ tx.oncomplete=()=>{$("#photoInput").value="";$("#photoCaption").value="";renderPhotos();};
+}
+async function renderPhotos(){
+ const db=await openPhotoDB();
+ const tx=db.transaction("photos","readonly");
+ const req=tx.objectStore("photos").getAll();
+ req.onsuccess=()=>{
+  const items=req.result.sort((a,b)=>b.date-a.date);
+  $("#photoGrid").innerHTML=items.length?items.map(x=>{
+   const url=URL.createObjectURL(x.file);
+   const cap=(x.caption||"World Cup memory").replace(/</g,"&lt;").replace(/"/g,"&quot;");
+   return `<div class="photo-item"><img src="${url}" alt="${cap}"><div class="photo-meta"><div>${cap}</div><button class="btn btn-light small delete-photo" data-id="${x.id}" type="button">Delete</button></div></div>`;
+  }).join(""):"<p class='muted'>No photos added yet.</p>";
+  $$(".delete-photo").forEach(b=>b.addEventListener("click",()=>deletePhoto(Number(b.dataset.id))));
+ };
+}
+async function deletePhoto(id){
+ const db=await openPhotoDB();const tx=db.transaction("photos","readwrite");tx.objectStore("photos").delete(id);tx.oncomplete=renderPhotos;
+}
+$("#addPhotosBtn").addEventListener("click",addPhotos);
+
+// Local supporter message board
+function getMessages(){return JSON.parse(localStorage.getItem("cw_worldcup_messages")||"[]");}
+function renderMessages(){
+ const msgs=getMessages();
+ $("#messageList").innerHTML=msgs.length?msgs.map((m,i)=>`<div class="message"><b>${m.name.replace(/</g,"&lt;")}</b><time> · ${new Date(m.date).toLocaleString()}</time><p>${m.text.replace(/</g,"&lt;").replace(/\n/g,"<br>")}</p><button class="btn btn-light small delete-message" data-index="${i}" type="button">Delete</button></div>`).join(""):"No messages yet.";
+ $$(".delete-message").forEach(b=>b.addEventListener("click",()=>{const a=getMessages();a.splice(Number(b.dataset.index),1);localStorage.setItem("cw_worldcup_messages",JSON.stringify(a));renderMessages();}));
+}
+function addMessage(){
+ const name=$("#messageName").value.trim(),text=$("#messageText").value.trim();
+ if(!name||!text){alert("Please add a name and message.");return;}
+ const a=getMessages();a.unshift({name,text,date:Date.now()});localStorage.setItem("cw_worldcup_messages",JSON.stringify(a));
+ $("#messageText").value="";renderMessages();
+}
+$("#addMessageBtn").addEventListener("click",addMessage);
+renderMessages();
+renderPhotos().catch(()=>{$("#photoGrid").innerHTML="<p class='muted'>Photo storage is not available in this browser.</p>";});
+
 if("serviceWorker" in navigator)window.addEventListener("load",()=>navigator.serviceWorker.register("service-worker.js").catch(()=>{}));
 </script>
 </body></html>
