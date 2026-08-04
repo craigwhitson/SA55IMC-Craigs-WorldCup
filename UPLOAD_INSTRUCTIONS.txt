@@ -1,38 +1,15 @@
-CRAIG WHITSON WORLD CUP — FINAL PROFESSIONAL VERSION
+FINAL GITHUB UPLOAD
 
-Repository:
+Upload ALL files in this folder to the root of:
 https://github.com/craigwhitson/SA55IMC-Craigs-WorldCup
 
-UPLOAD
-1. Extract this ZIP on your laptop.
-2. Open the GitHub repository above.
-3. Select Add file > Upload files.
-4. Upload every file from the extracted folder into the repository root.
-5. Confirm replacement of existing files.
-6. Commit directly to the main branch.
-7. Wait about 2–5 minutes.
-8. Open:
-   https://craigwhitson.github.io/SA55IMC-Craigs-WorldCup/
+Replace existing files and commit directly to main.
 
-IMPORTANT CACHE STEP
-Because an earlier service worker may be stored on your phone:
-- Open the website in Safari.
-- Refresh it once.
-- If the old version still appears, go to iPhone Settings > Safari > Advanced > Website Data,
-  search for github.io, remove that site data, and reopen the address.
-- Remove the old Home Screen icon and add it again after the new version is visible.
+Important:
+- hero-banner.jpg is the exact approved hero image and is not cropped or stretched.
+- team-photo.jpg is the actual team photograph.
+- The message board and Firebase are removed.
+- Photos and journal remain private on each device.
 
-SHARING
-Use the Share on WhatsApp button on the home page, or send the GitHub Pages address.
-
-PRIVACY
-Results and journal entries are stored locally on each device. They are not published to GitHub.
-
-
-NEW IN VERSION 2
-- Photos tab with private, on-device photo gallery
-- Messages tab with private, on-device supporter message board
-- Direct button to the official tournament site: https://masters.altiusrt.com/
-
-IMPORTANT
-The photo gallery and message board are private to each device. GitHub Pages cannot store shared public uploads or messages without an external database or third-party service.
+After GitHub Pages deploys, open:
+https://craigwhitson.github.io/SA55IMC-Craigs-WorldCup/?exactfinal=1

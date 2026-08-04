@@ -5,8 +5,7 @@
   "scope": "./",
   "display": "standalone",
   "background_color": "#f2f6f3",
-  "theme_color": "#063b2a",
-  "description": "Craig Whitson's South Africa IMC World Masters Hockey journey.",
+  "theme_color": "#052f22",
   "icons": [
     {
       "src": "icon-192.png",
