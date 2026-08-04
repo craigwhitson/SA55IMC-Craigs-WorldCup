@@ -1,0 +1,21 @@
+FINAL APP UPDATE — MAC
+
+Upload these files to the root of:
+https://github.com/craigwhitson/SA55IMC-Craigs-WorldCup
+
+1. index.html
+2. service-worker.js
+
+Replace the existing files and commit directly to main.
+
+Wait 2–5 minutes, then open:
+https://craigwhitson.github.io/SA55IMC-Craigs-WorldCup/?final=1
+
+What changed:
+- Message board removed completely.
+- All Firebase code removed.
+- Approved South Africa IMC front design added.
+- Playing-shirt portrait added.
+- Accurate SA Masters Hockey badge added.
+- Quote uses “loved ones”.
+- Photos remain private to the device and are clearly labelled.
