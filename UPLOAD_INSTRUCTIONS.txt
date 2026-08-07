@@ -1,15 +1,24 @@
-FINAL GITHUB UPLOAD
+CRAIG WHITSON WORLD CUP — GITHUB UPDATE — 7 AUGUST 2026
 
-Upload ALL files in this folder to the root of:
-https://github.com/craigwhitson/SA55IMC-Craigs-WorldCup
+WHAT CHANGED
+- Restored the official Altius live results link: https://masters.altiusrt.com/
+- Added a Live Results button in the top bar.
+- Added an Official Live Results button in Quick Access.
+- Added an Altius link above the fixture cards.
+- Updated the service-worker cache version so installed apps receive the change.
+- No approved photos, fixtures, journal, calendar, branding or layout content was removed.
 
-Replace existing files and commit directly to main.
+UPLOAD TO GITHUB
+1. Extract this ZIP.
+2. Open the existing GitHub repository: craigwhitson/SA55IMC-Craigs-WorldCup
+3. Choose Add file > Upload files.
+4. Upload ALL files from this package to the repository root.
+5. Replace files with the same names.
+6. Commit directly to main.
+7. Keep the existing GitHub Pages URL. There is no need to send supporters a new WhatsApp link.
 
-Important:
-- hero-banner.jpg is the exact approved hero image and is not cropped or stretched.
-- team-photo.jpg is the actual team photograph.
-- The message board and Firebase are removed.
-- Photos and journal remain private on each device.
+CACHE / INSTALLED APP
+The service worker cache has been bumped to cw-final-altius-v2. Most users should receive the update when they reopen or refresh the site. If an installed Home Screen version still shows the old page, close and reopen it and refresh in Safari once.
 
-After GitHub Pages deploys, open:
-https://craigwhitson.github.io/SA55IMC-Craigs-WorldCup/?exactfinal=1
+OFFICIAL LIVE RESULTS
+https://masters.altiusrt.com/

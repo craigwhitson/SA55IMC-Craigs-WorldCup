@@ -1,4 +1,4 @@
-const CACHE='cw-final-exact-hero-v1';
+const CACHE='cw-final-altius-v2';
 const ASSETS=['./','./index.html','./manifest.webmanifest','./hero-banner.jpg','./team-photo.jpg','./south-africa-flag.svg','./icon-192.png','./icon-512.png','./apple-touch-icon.png','./Craig_Whitson_World_Cup_2026.ics'];
 self.addEventListener('install',e=>{self.skipWaiting();e.waitUntil(caches.open(CACHE).then(c=>c.addAll(ASSETS)))});
 self.addEventListener('activate',e=>e.waitUntil(Promise.all([self.clients.claim(),caches.keys().then(k=>Promise.all(k.filter(x=>x!==CACHE).map(x=>caches.delete(x))))])));
